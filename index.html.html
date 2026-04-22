@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Licença Especial Indenizada - Paraná</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Inter',sans-serif;background:#f5f7fb;color:#111827}
+
+header{
+  background:linear-gradient(120deg,#0f172a,#1e293b);
+  color:#fff;
+  padding:90px 20px 110px;
+  text-align:center;
+}
+
+header h1{
+  font-size:38px;
+  max-width:800px;
+  margin:auto;
+  line-height:1.2;
+}
+
+header p{
+  margin-top:18px;
+  font-size:18px;
+  opacity:.85;
+}
+
+.container{
+  max-width:1100px;
+  margin:-70px auto 40px;
+  padding:20px;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:25px;
+}
+
+@media(max-width:900px){.container{grid-template-columns:1fr}}
+
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:30px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.badge{
+  background:#e2e8f0;
+  color:#0f172a;
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+h2{margin-top:0;font-size:24px}
+
+.highlight{color:#1e293b;font-weight:600}
+
+ul{padding-left:18px}
+li{margin-bottom:10px}
+
+.authority{
+  background:#f1f5f9;
+  padding:15px;
+  border-radius:10px;
+  font-size:14px;
+  margin-top:20px;
+  border-left:4px solid #1e293b;
+}
+
+.urgency{
+  margin-top:20px;
+  padding:15px;
+  border-radius:10px;
+  background:#fff1f2;
+  color:#7f1d1d;
+  font-size:14px;
+}
+
+.form-card{position:sticky;top:20px}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  font-size:14px;
+  margin-bottom:12px;
+}
+
+input:focus,textarea:focus{
+  outline:none;
+  border-color:#1e293b;
+  box-shadow:0 0 0 2px rgba(30,41,59,.1)
+}
+
+button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,#1e293b,#334155);
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+
+.trust{font-size:12px;color:#6b7280;margin-top:10px}
+.success{display:none;margin-top:10px;color:#16a34a}
+
+footer{text-align:center;font-size:12px;color:#6b7280;margin:40px 0}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Servidor do Estado do Paraná pode ter direito à indenização por licenças não usufruídas</h1>
+  <p>Tese jurídica consolidada garante a conversão de licenças especiais em valores indenizatórios.</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <div class="badge">Especialistas em Direito Administrativo</div>
+
+    <h2>Análise jurídica com base em entendimento consolidado</h2>
+
+    <p>Servidores estaduais do Paraná que não usufruíram suas licenças especiais podem ter direito à <span class="highlight">indenização financeira</span>, conforme entendimento já reconhecido pelos tribunais.</p>
+
+    <ul>
+      <li>✔ Aplicável a servidores ativos e aposentados</li>
+      <li>✔ Baseado em precedentes judiciais favoráveis</li>
+      <li>✔ Possibilidade de valores expressivos</li>
+    </ul>
+
+    <div class="authority">
+      Atuação focada na análise individualizada do histórico funcional, com verificação de tempo de serviço, períodos não gozados e viabilidade jurídica da indenização.
+    </div>
+
+    <div class="urgency">
+      ⚠️ O prazo para requerer pode ser limitado. A análise antecipada é essencial para evitar perda do direito.
+    </div>
+
+    <h2 style="margin-top:30px">Etapas da análise</h2>
+
+    <ul>
+      <li>1. Envio das informações iniciais</li>
+      <li>2. Avaliação jurídica do caso</li>
+      <li>3. Retorno com orientação especializada</li>
+    </ul>
+
+  </div>
+
+  <div class="card form-card">
+    <h2>Solicitar análise jurídica</h2>
+
+    <form id="form">
+      <input type="text" id="nome" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <input type="tel" id="telefone" placeholder="WhatsApp" required>
+      <textarea id="mensagem" placeholder="Informe órgão e tempo de serviço"></textarea>
+
+      <button type="submit">Solicitar análise gratuita</button>
+
+      <div class="trust">Atendimento sigiloso • Dados protegidos</div>
+
+      <div class="success" id="successMsg">Redirecionando para o WhatsApp...</div>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 - Atendimento jurídico especializado
+</footer>
+
+<script>
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwK8YIRs-BcID1n80C6neVRlcqZANrBgOltKMm-6P5BCERXcuS6rx6s-QDzXxwothyM/exec";
+const PHONE = "5542999120022";
+
+document.getElementById('form').addEventListener('submit', async function(e){
+ e.preventDefault();
+
+ const nome=document.getElementById('nome').value;
+ const email=document.getElementById('email').value;
+ const telefone=document.getElementById('telefone').value;
+ const mensagem=document.getElementById('mensagem').value;
+
+ const texto=encodeURIComponent(
+ `Olá, solicitei análise jurídica.\n\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nSituação: ${mensagem}`
+ );
+
+ await fetch(WEBHOOK_URL,{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({nome,email,telefone,mensagem})
+ });
+
+ document.getElementById('successMsg').style.display='block';
+
+ setTimeout(()=>{
+  window.location.href=`https://wa.me/${PHONE}?text=${texto}`;
+ },1200);
+});
+</script>
+
+</body>
+</html>
